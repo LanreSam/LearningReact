@@ -9,21 +9,22 @@ import ReactDom from 'react-dom';
 //     </h4>);
 // }
 
-function App () {
+function BooklistApp () {
     return (
-        <div>
-            <Name/>
-            <Message/>
-        </div>
+        <section>
+            <BookName/>
+        </section>
     );
 }
 
-const Name = () => <h2>Lanre</h2>;
-const Message = () => { return <p>Lorem ipsum dolor, 
-                sit amet consectetur adipisicing elit. Ex molestiae aliquid soluta dolorem a dolorum necessitatibus 
-                et suscipit dolor aut.
-            </p>};
+const BookName = () => {
+    return <article>This is a booklist application.</article>
+};
 
+const BookImg = () => {
+    return <img src="" alt="" />;
+}
 
-ReactDom.render(<App />, document.getElementById('root'));
+ReactDom.render(<BooklistApp/>, document.getElementById('root'));
+
 
