@@ -2,28 +2,41 @@ import React from 'react';
 
 import ReactDom from 'react-dom';
 
-// function Name() {
-//     return (
-//     <h4>
-//         My name is Lanre
-//     </h4>);
-// }
+
 
 function BooklistApp () {
     return (
         <section>
-            <BookName/>
+            <BookDesc/>
         </section>
     );
 }
 
-const BookName = () => {
-    return <article>This is a booklist application.</article>
+//this component contains the book's total description
+const BookDesc = () => {
+    return (
+        <article>
+            <BookImg/>
+            <BookTitle/>
+            <BookAuthor/>
+        </article>
+    );
 };
 
+//this is the book's image coomponent
 const BookImg = () => {
-    return <img src="" alt="" />;
+    return <img src="https://images-na.ssl-images-amazon.com/images/I/51mN3bY0JjL._SX332_BO1,204,203,200_.jpg" alt="" />;
 }
+
+//this is the book's title coomponent
+const BookTitle = () => {
+    return <h1>The Subtle Art Of Not Giving A F*ck</h1>;
+};
+
+//this is the book's author component
+const BookAuthor = () => {
+    return <h4>Mark Manson</h4>
+};
 
 ReactDom.render(<BooklistApp/>, document.getElementById('root'));
 
