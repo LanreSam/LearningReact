@@ -2,11 +2,14 @@ import React from 'react';
 
 import ReactDom from 'react-dom';
 
+//CSS
+import './style.css';
+
 
 //this is the boolist main application.
 function BooklistApp () {
     return (
-        <section>
+        <section className='bookList'>
             <BookDesc/>
         </section>
     );
